@@ -10,3 +10,7 @@
  input {
     display: block;
  }
+
+ fieldset {
+   border: none;
+ }

@@ -9,15 +9,23 @@
 <p>Ceci est un paragraphe de texte.</p>
 
 <!-- Formulaire sans étiquette pour les champs -->
-<form aria-labelledby="form-title">
+<form aria-labelledby="form-title" role="form">
     <h2 id="form-title">Formulaire de Contact</h2>
 
-    <label class="hidden" for="name">Nom :</label>
-    <input id="name" type="text" placeholder="Entrez votre nom" aria-label="nom">
-    
-    <label class="hidden" for="email">Adresse e-mail :</label>
-    <input id="email" type="email" placeholder="Entrez votre adresse e-mail" aria-label="adresse e-mail">
-    
+    <fieldset>
+        <legend class="hidden">Vos informations personnelles</legend>
+        
+        <label for="name" class="hidden">Nom :</label>
+        <input id="name" type="text" placeholder="Entrez votre nom" aria-required="true" aria-labelledby="name-label" aria-describedby="name-desc">
+        <span id="name-label" class="hidden">Nom</span>
+        <span id="name-desc" class="hidden">Ce champ est obligatoire.</span>
+        
+        <label for="email" class="hidden">Adresse e-mail :</label>
+        <input id="email" type="email" placeholder="Entrez votre adresse e-mail" aria-required="true" aria-labelledby="email-label" aria-describedby="email-desc">
+        <span id="email-label" class="hidden">Adresse e-mail</span>
+        <span id="email-desc" class="hidden">Veuillez entrer une adresse e-mail valide. Ce champ est obligatoire.</span>
+    </fieldset>
+
     <button type="submit" aria-label="Envoyer le formulaire">Envoyer</button>
 </form>
 
