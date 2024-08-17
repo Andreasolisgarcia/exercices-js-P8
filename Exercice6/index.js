@@ -10,5 +10,9 @@ function clearDisplay() {
 
 function calculateResult() {
   const result = eval($display.value);
-  $display.value = result;
+  if (result === Infinity) {
+    $display.value = 'Division by zero is not allowed'
+  } else {
+    $display.value = result;
+  }
 }
