@@ -9,7 +9,7 @@ function pairNumbers(a, b) {
     }
   }
 
-  return pairNumbersArray;
+  return pairNumbersArray.join();
 }
 
 export default pairNumbers;
